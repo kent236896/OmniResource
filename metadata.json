@@ -1,0 +1,5 @@
+{
+  "name": "OmniResource Downloader",
+  "description": "AI-powered resource downloader for Pexels, Pixabay, and Coverr with multi-LLM support, concurrent download management, and desktop application support via Electron.",
+  "requestFramePermissions": []
+}

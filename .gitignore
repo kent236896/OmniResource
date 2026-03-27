@@ -1,0 +1,12 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+downloads/
+*.log
+.env*
+!.env.example
+build-electron/
+dist-electron/
+database.sqlite

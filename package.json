@@ -1,0 +1,106 @@
+{
+  "name": "omni-resource",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "main": "electron.ts",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "electron:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && electron --import=tsx electron.ts\"",
+    "electron:build": "npm run build && electron-builder",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit",
+    "start": "node server.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^1.29.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "@xenova/transformers": "^2.17.2",
+    "axios": "^1.13.6",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "fs-extra": "^11.3.4",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "openai": "^6.33.0",
+    "p-limit": "^7.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "sonner": "^2.0.7",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1",
+    "tailwind-merge": "^3.5.0",
+    "vite": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.1",
+    "electron": "^41.0.4",
+    "electron-builder": "^26.8.1",
+    "electron-is-dev": "^3.0.1",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0",
+    "wait-on": "^9.0.4"
+  },
+  "build": {
+    "appId": "com.omniresource.downloader",
+    "productName": "OmniResource",
+    "copyright": "Copyright © 2024 OmniResource",
+    "icon": "omnin-logo.ico",
+    "directories": {
+      "output": "dist-electron",
+      "buildResources": "build-resources"
+    },
+    "files": [
+      "dist/**/*",
+      "electron.ts",
+      "server.ts",
+      "package.json",
+      "node_modules/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "omnin-logo.ico"
+    },
+    "win": {
+      "icon": "omnin-logo.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "publisherName": "OmniResource",
+      "verifyUpdateCodeSignature": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "allowElevation": true,
+      "installerIcon": "omnin-logo.ico",
+      "uninstallerIcon": "omnin-logo.ico",
+      "installerHeaderIcon": "omnin-logo.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "OmniResource",
+      "include": "build-resources/installer.nsh",
+      "installerLanguages": ["SimpChinese", "English"],
+      "language": "2052",
+      "multiLanguageInstaller": true
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "public/img/omni-logo.png"
+    }
+  }
+}
