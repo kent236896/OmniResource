@@ -3,6 +3,7 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
+  "author": "OmniResource",
   "main": "electron.ts",
   "scripts": {
     "dev": "tsx server.ts",
@@ -15,7 +16,6 @@
     "start": "node server.ts"
   },
   "dependencies": {
-    "@google/genai": "^1.29.0",
     "@tailwindcss/vite": "^4.1.14",
     "@vitejs/plugin-react": "^5.0.4",
     "@xenova/transformers": "^2.17.2",
@@ -27,7 +27,6 @@
     "fs-extra": "^11.3.4",
     "lucide-react": "^0.546.0",
     "motion": "^12.23.24",
-    "openai": "^6.33.0",
     "p-limit": "^7.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -55,7 +54,7 @@
   "build": {
     "appId": "com.omniresource.downloader",
     "productName": "OmniResource",
-    "copyright": "Copyright © 2024 OmniResource",
+    "copyright": "Copyright © 2026 OmniResource",
     "icon": "omnin-logo.ico",
     "directories": {
       "output": "dist-electron",
@@ -77,10 +76,11 @@
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ],
-      "publisherName": "OmniResource",
       "verifyUpdateCodeSignature": false
     },
     "nsis": {
@@ -94,7 +94,10 @@
       "createStartMenuShortcut": true,
       "shortcutName": "OmniResource",
       "include": "build-resources/installer.nsh",
-      "installerLanguages": ["SimpChinese", "English"],
+      "installerLanguages": [
+        "zh_CN",
+        "en_US"
+      ],
       "language": "2052",
       "multiLanguageInstaller": true
     },

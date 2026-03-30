@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r \"i18n\\\\|i18next\\\\|translation\\\\|locale\" /d/js_code/OmniResource/src --include=*.ts --include=*.tsx --include=*.json)"
+    ]
+  }
+}

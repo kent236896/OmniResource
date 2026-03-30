@@ -16,8 +16,9 @@ import { DownloadProgressPanel } from './components/download/DownloadProgressPan
 import { DiscoveryPage } from './pages/DiscoveryPage';
 import { ManagerPage } from './pages/ManagerPage';
 import { SettingsPage } from './pages/SettingsPage';
+import { AboutPage } from './pages/AboutPage';
 
-type Tab = 'search' | 'manager' | 'settings';
+type Tab = 'search' | 'manager' | 'settings' | 'about';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<Tab>('search');
@@ -141,6 +142,8 @@ export default function App() {
             {activeTab === 'settings' && (
               <SettingsPage envStatus={envStatus} onEnvStatusChange={setEnvStatus} />
             )}
+
+            {activeTab === 'about' && <AboutPage />}
           </main>
 
           <StatusBar systemCpus={cpus} resourceCount={totalAssets} />

@@ -1,14 +1,15 @@
 import { motion } from 'framer-motion';
-import { Search, Settings, Layers, Download } from 'lucide-react';
+import { Search, Settings, Layers, Download, Info } from 'lucide-react';
 const logoUrl = '/img/omni-logo.png';
 import { cn } from '../../lib/utils';
 
-type Tab = 'search' | 'manager' | 'settings';
+type Tab = 'search' | 'manager' | 'settings' | 'about';
 
 const NAV_ITEMS = [
   { id: 'search' as Tab, label: 'Discovery', icon: Search },
   { id: 'manager' as Tab, label: 'File Manager', icon: Layers },
   { id: 'settings' as Tab, label: 'Preferences', icon: Settings },
+  { id: 'about' as Tab, label: 'About', icon: Info },
 ];
 
 interface SidebarProps {
