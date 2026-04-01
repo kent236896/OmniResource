@@ -82,7 +82,7 @@ If you have any questions about this Privacy Policy, please contact:
 
 **Author:** TANGKUN
 **Project:** OmniResource
-**Repository:** https://github.com/tangkun/omniresource
+**Repository:** https://github.com/kent236896/omniresource
 
 ---
 
