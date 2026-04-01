@@ -14,7 +14,7 @@ OmniResource ("the Application") is a desktop media discovery and download tool.
 ## 2. Data We Collect
 
 ### 2.1 Data You Provide
-- **API Keys** — Third-party API keys (Pexels, Pixabay, OpenAI, Google GenAI) that you enter in the Preferences page. These are stored **locally on your device only** and are never transmitted to our servers.
+- **API Keys** — Third-party API keys (Pexels, Pixabay) that you enter in the Preferences page. These are stored **locally on your device only** and are never transmitted to our servers.
 - **Search Queries** — Keywords and search parameters you enter are sent directly to the respective third-party platforms (Pexels, Pixabay) via their official APIs.
 
 ### 2.2 Data Generated Locally
