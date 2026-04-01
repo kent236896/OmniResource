@@ -66,7 +66,7 @@ Since all data is stored locally, your data security depends on the security of 
 
 ## 6. Children's Privacy
 
-OmniResource is not directed at children under the age of 13. We do not knowingly collect information from children.
+OmniResource is designed for users aged 3 and above. This application does not collect, store, or transmit any personal information from any user, including children.
 
 ---
 
