@@ -38,7 +38,6 @@ The Application communicates with the following third-party platforms when you p
 |---------|---------|---------------|
 | Pexels | Stock photo & video search | https://www.pexels.com/privacy-policy/ |
 | Pixabay | Stock photo & video search | https://pixabay.com/service/privacy/ |
-| Datamuse | Keyword expansion (no account required) | https://www.datamuse.com/api/ |
 
 These services are governed by their own privacy policies. We recommend reviewing them separately.
 
